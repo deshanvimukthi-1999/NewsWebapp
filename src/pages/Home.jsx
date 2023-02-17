@@ -13,14 +13,14 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts${cat}`);
+        const res = await axios.get(`/posts`);
         setPosts(res.data);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, [cat]);
+  }, );
 
   const getText = (html) =>{
     const doc = new DOMParser().parseFromString(html, "text/html")
