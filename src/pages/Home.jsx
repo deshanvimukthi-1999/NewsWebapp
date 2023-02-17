@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="posts">
-        {posts.map((post)  =>(
+        {posts.forEach((post)  =>{
           <div className="post" key={post.id}>
             <div className="img">
               <img src={`../upload/${post.img}`} alt="" />
@@ -43,7 +43,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        ))}
+        })}
       </div>
     </div>
   )
