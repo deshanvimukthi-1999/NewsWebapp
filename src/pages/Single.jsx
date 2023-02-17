@@ -4,7 +4,6 @@ import Delete from "../img/delete.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
-import Menu from "../components/Menu";
 
 const Single = () => {
   const [post, setPost] = useState({});
@@ -56,7 +55,6 @@ const Single = () => {
         <h1>{post.title}</h1>
         {getText(post.desc)}
       </div>
-      <Menu cat={post.cat}/>
     </div>
   );
 };
