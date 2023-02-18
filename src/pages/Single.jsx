@@ -14,7 +14,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`api/posts/${id}`);
+        const res = await axios.get(`https://news-api-deshan.herokuapp.com/api/posts/${id}`);
         setPost(res.data);
       } catch (err) {
         console.log(err);
@@ -25,7 +25,7 @@ const Single = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`api/posts/${id}`);
+      await axios.delete(`https://news-api-deshan.herokuapp.com/api/posts/${id}`);
       navigate("/");
     } catch (err) {
       console.log(err);
