@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://news-api-deshan.herokuapp.com/"
+  "proxy": "https://news-api-deshan.herokuapp.com"
 }
