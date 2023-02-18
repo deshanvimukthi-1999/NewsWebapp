@@ -30,8 +30,10 @@ const Home = () => {
   return (
     <div className="home">
       <div className="posts">
-        {posts.map((post)  =>(
-          <div className="post" key={post.id}>
+      {posts &&
+        posts.map((post) => {
+          return (
+            <div className="post" key={post.id}>
             <div className="img">
               <img src={`../upload/${post.img}`} alt="" />
             </div>
@@ -43,10 +45,13 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   )
 }
+
+
 
 export default Home
