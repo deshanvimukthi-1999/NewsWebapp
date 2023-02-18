@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://news-api-deshan.herokuapp.com/api/posts${cat}`);
+        const res = await axios.get(`api/posts${cat}`);
         console.log(res);
         setPosts(res.data);
 
